@@ -17,8 +17,8 @@ export default function Home() {
           Specializing in modern web applications that scales.
         </p>
         </div>
-        <div className={styles.buttonWrapper}>
-          <button className={styles.buttonPrimary}>Download CV</button>
+           <div className={styles.buttonWrapper}>
+           <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className={styles.buttonPrimary}>View CV</a>
         </div>
           <ProjectGrid />
       </main>
