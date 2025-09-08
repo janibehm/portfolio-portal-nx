@@ -1,5 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { ProjectGrid } from "./components/ProjectGrid";
+
+
 
 export default function Home() {
   return (
@@ -8,14 +11,18 @@ export default function Home() {
         <h1 className={styles.title}>
           PORTAL <br/> PORTFOLIO
         </h1>
+        <div className={styles.descriptionWrapper}>
         <p className={styles.description}>
           I craft digital experiences that blend beautiful design with functionality. 
           Specializing in modern web applications that scales.
         </p>
+        </div>
         <div className={styles.buttonWrapper}>
           <button className={styles.buttonPrimary}>Download CV</button>
         </div>
+          <ProjectGrid />
       </main>
+  
       <footer className={styles.footer}>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
