@@ -123,12 +123,23 @@
 
 @media (max-width: 600px) {
   .page {
-    padding: 32px;
-    padding-bottom: 80px;
+    padding: 16px; 
+    padding-bottom: 40px;
+    gap: 32px; 
   }
 
   .main {
     align-items: center;
+    width: 100%; 
+  }
+  
+  .description {
+    width: 100%; 
+    max-width: 100%; 
+  }
+
+  .title {
+    font-size: 36px; 
   }
 
   .main ol {
