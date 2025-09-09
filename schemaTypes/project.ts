@@ -32,7 +32,7 @@ export default defineType({
       title: 'GitHub Link',
       type: 'url',
       validation: (Rule) => 
-        Rule.uri({
+        Rule.required().uri({
           scheme: ['http', 'https'],
         }).custom((url) => {
           if (url && !url.includes('github.com')) {
@@ -42,8 +42,8 @@ export default defineType({
         }),
     }),
     defineField({
-      name: 'websiteLink',
-      title: 'Website Link',
+      name: 'liveLink',
+      title: 'Live Link',
       type: 'url',
       validation: (Rule) => 
         Rule.uri({
