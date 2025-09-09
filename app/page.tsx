@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { ProjectGrid } from "./components/ProjectGrid";
+import { Header } from "./components/Header";
 
 
 
@@ -8,19 +9,8 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          PORTAL <br/> PORTFOLIO
-        </h1>
-        <div className={styles.descriptionWrapper}>
-        <p className={styles.description}>
-          I craft digital experiences that blend beautiful design with functionality. 
-          Specializing in modern web applications that scales.
-        </p>
-        </div>
-           <div className={styles.buttonWrapper}>
-           <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className={styles.buttonPrimary}>View CV</a>
-        </div>
-          <ProjectGrid />
+        <Header />
+        <ProjectGrid />
       </main>
   
       <footer className={styles.footer}>
