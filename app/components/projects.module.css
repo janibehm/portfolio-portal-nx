@@ -1,7 +1,7 @@
 .projectGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 20px; 
+  grid-template-columns: 1fr; 
+  gap: 50px; 
   padding: 20px; 
   width: 100%;
   max-width: 1200px;
@@ -10,82 +10,79 @@
 }
 
 .projectCard {
-  background: #fff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   transition: transform 0.2s ease;
-}
 
-.projectCard:hover {
-  transform: translateY(-4px);
+ gap: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
 }
 
 .projectImage {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 280px;
+  border-radius: 14px;
   object-fit: cover;
+  opacity: 0.9;
 }
 
 .projectTitle {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 0 12px 0;
-  color: #333;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  color: var(--foreground);
+  text-align: center;
 }
 
 .projectDescription {
-  color: #666;
-  line-height: 1.6;
-  margin: 0 0 16px 0;
-}
-
-.projectTech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.techTag {
-  background: #f0f0f0;
-  padding: 4px 12px;
-  border-radius: 16px;
-  font-size: 14px;
-  color: #555;
+  line-height: 1.7;
+  margin: 0 0 24px 0;
+  font-size: 1.25rem;
+  color: var(--foreground);
+  text-align: center;
 }
 
 .projectLinks {
   display: flex;
-  gap: 12px;
+  gap: 16px;
+  margin-top: 16px;
+  justify-content: center;
 }
-
 .projectLink {
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 14px 28px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.1rem;
   transition: background 0.2s;
 }
 
 .primaryLink {
-  background: #000;
-  color: #fff;
+  background: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
 }
 
 .primaryLink:hover {
-  background: #333;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 .secondaryLink {
-  background: transparent;
-  color: #000;
-  border: 1px solid #ddd;
+  background: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
 }
 
 .secondaryLink:hover {
-  background: #f5f5f5;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 
@@ -125,35 +122,5 @@
   
   .projectImage {
     height: 180px; 
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .projectCard {
-    background: #1a1a1a;
-    color: #fff;
-  }
-  
-  .projectTitle {
-    color: #fff;
-  }
-  
-  .projectDescription {
-    color: #ccc;
-  }
-  
-  .techTag {
-    background: #333;
-    color: #ccc;
-  }
-  
-  .secondaryLink {
-    color: #fff;
-    border-color: #444;
-  }
-  
-  .secondaryLink:hover {
-    background: #333;
   }
 }
