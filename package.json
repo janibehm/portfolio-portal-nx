@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@bou-co/parsing": "^1.0.21",
+    "@formspree/react": "^3.0.0",
     "@sanity/image-url": "^1.2.0",
     "next": "15.5.2",
     "next-sanity": "^10.1.2",

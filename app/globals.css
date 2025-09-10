@@ -1,12 +1,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --text-white: #fff;
+  --text-primary: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --text-white: #fff;
+    --text-primary: #fff;
   }
 }
 
@@ -17,7 +21,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-primary);
   background: 
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('/mountains.jpg') center/cover no-repeat fixed;

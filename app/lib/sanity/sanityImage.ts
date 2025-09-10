@@ -10,7 +10,7 @@ export interface SanityImageSource {
         _ref: string;
         _type: string;
     };
-    [key: string]: any;
+    [key: string]: unknown;
 }
 
 export function urlFor(source: SanityImageSource): ReturnType<typeof builder.image> {

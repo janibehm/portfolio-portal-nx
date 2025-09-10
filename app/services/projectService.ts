@@ -1,5 +1,5 @@
 import { client } from "../lib/sanity/clients";
-import { urlFor } from "../lib/sanity/sanityImage";
+import { urlFor, SanityImageSource } from "../lib/sanity/sanityImage";
 import { createParser } from "../lib/parser-config";
 import { RawProject, ProcessedProject } from "../types/project";
 
@@ -45,7 +45,7 @@ export async function fetchProjects(): Promise<ProcessedProject[]> {
             return {
                 title: validatedProject.title,
                 description: validatedProject.description,
-                src: urlFor(validatedProject.image as any).width(1000).height(1000).url(),
+                src: urlFor(validatedProject.image as SanityImageSource).width(1000).height(1000).url(),
                 alt: validatedProject.title,
                 githubLink: validatedProject.githubLink,
                 liveLink: validatedProject.liveLink
