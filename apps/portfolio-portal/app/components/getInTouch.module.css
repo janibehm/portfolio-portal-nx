@@ -1,0 +1,50 @@
+.section {
+  padding: 2rem 0;
+  max-width: 400px;
+}
+
+.heading {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: var(--text-white);
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.profileImage {
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.title {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .profileContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
