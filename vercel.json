@@ -1,21 +1,11 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "apps/portfolio-portal/package.json",
-      "use": "@vercel/next",
-      "config": {
-        "distDir": "apps/portfolio-portal/.next"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "apps/portfolio-portal/$1"
-    }
-  ],
-  "installCommand": "npm install",
   "buildCommand": "npx nx build portfolio-portal",
-  "outputDirectory": "apps/portfolio-portal/.next"
+  "outputDirectory": "apps/portfolio-portal/.next",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "functions": {
+    "apps/portfolio-portal/.next/server/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }
