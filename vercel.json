@@ -2,10 +2,5 @@
   "buildCommand": "npx nx build portfolio-portal",
   "outputDirectory": "apps/portfolio-portal/.next",
   "installCommand": "npm install",
-  "framework": "nextjs",
-  "functions": {
-    "apps/portfolio-portal/.next/server/**/*.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "framework": "nextjs"
 }
