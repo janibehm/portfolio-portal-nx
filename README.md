@@ -35,6 +35,24 @@ These targets are either [inferred automatically](https://nx.dev/concepts/inferr
 
 [More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
+## Running Applications
+
+### Portfolio Next.js App
+To start the main portfolio Next.js application (runs on port 4200):
+
+```sh
+npx nx serve portfolio-portal
+```
+
+### Sanity Studio
+To start the Sanity CMS studio (runs on port 3333):
+
+```sh
+npx nx serve portfolio-portal-sanity
+```
+
+**Note**: Both applications can run simultaneously on different ports. The Next.js app will be available at `http://localhost:4200` and the Sanity studio at `http://localhost:3333`.
+
 ## Versioning and releasing
 
 To version and release the library use
