@@ -12,11 +12,19 @@
       }
     },
     "build": {
-      "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
       "options": {
-        "outputPath": "dist/apps/portfolio-portal"
+        "command": "next build",
+        "cwd": "apps/portfolio-portal"
       }
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "next start",
+        "cwd": "apps/portfolio-portal"
+      },
+      "dependsOn": ["build"]
     }
   },
   "tags": []
