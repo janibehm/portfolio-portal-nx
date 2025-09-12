@@ -5,17 +5,24 @@
   "sourceRoot": "apps/portfolio-portal-sanity",
   "targets": {
     "serve": {
-      "executor": "@nx/next:server",
+      "executor": "nx:run-commands",
       "options": {
-        "buildTarget": "portfolio-portal-sanity:build",
-        "dev": true
+        "command": "npx sanity dev --port 3333",
+        "cwd": "apps/portfolio-portal-sanity"
       }
     },
     "build": {
-      "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
       "options": {
-        "outputPath": "dist/apps/portfolio-portal-sanity"
+        "command": "npx sanity build",
+        "cwd": "apps/portfolio-portal-sanity"
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx sanity deploy",
+        "cwd": "apps/portfolio-portal-sanity"
       }
     }
   },
