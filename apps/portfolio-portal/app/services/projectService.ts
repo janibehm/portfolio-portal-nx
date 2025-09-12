@@ -26,10 +26,10 @@ export async function fetchProjects(): Promise<ProcessedProject[]> {
         liveLink
     }`;
     
-    const projects = await client.fetch<RawProject[]>(query);
+    const projects: RawProject[] = await client.fetch<RawProject[]>(query);
     
     return Promise.all(
-        projects.map(async (project) => {
+        projects.map(async (project: RawProject): Promise<ProcessedProject> => {
             // Parse and validate the project data
             const parsedProject = await projectParser(project);
             
@@ -45,7 +45,7 @@ export async function fetchProjects(): Promise<ProcessedProject[]> {
             return {
                 title: validatedProject.title,
                 description: validatedProject.description,
-                src: urlFor(validatedProject.image as SanityImageSource).width(1000).height(1000).url(),
+                src: urlFor(validatedProject.image as SanityImageSource).width(400).height(400).format('webp').url(),
                 alt: validatedProject.title,
                 githubLink: validatedProject.githubLink,
                 liveLink: validatedProject.liveLink
