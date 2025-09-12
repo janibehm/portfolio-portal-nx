@@ -13,6 +13,10 @@ export interface SanityImageSource {
     [key: string]: unknown;
 }
 
-export function urlFor(source: SanityImageSource): ReturnType<typeof builder.image> {
-    return builder.image(source);
+export function urlFor(source: SanityImageSource) {
+    return builder.image(source).format('webp').quality(85);
+}
+
+export function urlForFormat(source: SanityImageSource, format: 'webp' | 'jpg' | 'png' = 'webp') {
+    return builder.image(source).format(format).quality(85);
 }

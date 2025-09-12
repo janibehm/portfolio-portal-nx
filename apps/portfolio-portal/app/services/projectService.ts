@@ -45,7 +45,7 @@ export async function fetchProjects(): Promise<ProcessedProject[]> {
             return {
                 title: validatedProject.title,
                 description: validatedProject.description,
-                src: urlFor(validatedProject.image as SanityImageSource).width(400).height(400).format('webp').url(),
+                src: urlFor(validatedProject.image as SanityImageSource).width(900).height(300).url(),
                 alt: validatedProject.title,
                 githubLink: validatedProject.githubLink,
                 liveLink: validatedProject.liveLink
