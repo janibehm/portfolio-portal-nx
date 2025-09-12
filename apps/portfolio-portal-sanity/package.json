@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-portal",
+  "name": "portfolio-portal-sanity",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
@@ -15,18 +15,7 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^4.7.0",
-    "react": "^19.1",
-    "react-dom": "^19.1",
-    "sanity": "^4.7.0",
-    "styled-components": "^6.1.18"
-  },
-  "devDependencies": {
-    "@sanity/eslint-config-studio": "^5.0.2",
-    "@types/react": "^19.1",
-    "eslint": "^9.28",
-    "prettier": "^3.5",
-    "typescript": "^5.8"
+    "styled-components": "^6.1.19"
   },
   "prettier": {
     "semi": false,
