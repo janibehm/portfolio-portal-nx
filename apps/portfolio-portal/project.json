@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-portal",
+  "projectType": "application",
+  "root": "apps/portfolio-portal",
+  "sourceRoot": "apps/portfolio-portal",
+  "targets": {
+    "serve": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "portfolio-portal:build",
+        "dev": true
+      }
+    },
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/portfolio-portal"
+      }
+    }
+  },
+  "tags": []
+}
