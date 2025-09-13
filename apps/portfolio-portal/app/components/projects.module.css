@@ -85,6 +85,26 @@
   color: var(--foreground);
 }
 
+/* Laptop responsive styles */
+@media (min-width: 769px) and (max-width: 1440px) {
+  .projectCard {
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .projectImage {
+    height: 240px;
+  }
+  
+  .projectTitle {
+    font-size: 28px;
+  }
+  
+  .projectDescription {
+    font-size: 1.1rem;
+  }
+}
+
 /* Mobile responsive styles */
 
 @media (max-width: 768px) {
