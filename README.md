@@ -1,110 +1,76 @@
-# Org
+# Portfolio Portal
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+A modern portfolio website built with Nx monorepo architecture, featuring a Next.js frontend and Sanity CMS backend.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+## Architecture
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+- **Frontend**: Next.js 15 with App Router
+- **CMS**: Sanity Studio for content management
+- **Monorepo**: Nx workspace for unified development
+- **Styling**: CSS Modules and global styles
+- **Images**: Next.js Image optimization with WebP support
 
-## Finish your CI setup
+## Getting Started
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/ysOLJfVqlw)
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
 
-## Generate a library
+### Installation
 
-```sh
-npx nx g @nx/js:lib packages/pkg1 --publishable --importPath=@my-org/pkg1
+```bash
+npm install
 ```
 
-## Run tasks
+### Development
 
-To build the library use:
-
-```sh
-npx nx build pkg1
-```
-
-To run any task with Nx use:
-
-```sh
-npx nx <target> <project-name>
-```
-
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Running Applications
-
-### Portfolio Next.js App
-To start the main portfolio Next.js application (runs on port 4200):
-
-```sh
+Start the portfolio website:
+```bash
 npx nx serve portfolio-portal
 ```
+Available at: http://localhost:4200
 
-### Sanity Studio
-To start the Sanity CMS studio (runs on port 3333):
-
-```sh
+Start the Sanity CMS studio:
+```bash
 npx nx serve portfolio-portal-sanity
 ```
+Available at: http://localhost:3333
 
-**Note**: Both applications can run simultaneously on different ports. The Next.js app will be available at `http://localhost:4200` and the Sanity studio at `http://localhost:3333`.
+Both applications can run simultaneously.
 
-## Versioning and releasing
+### Building
 
-To version and release the library use
-
-```
-npx nx release
-```
-
-Pass `--dry-run` to see what would happen without actually releasing the library.
-
-[Learn more about Nx release &raquo;](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Keep TypeScript project references up to date
-
-Nx automatically updates TypeScript [project references](https://www.typescriptlang.org/docs/handbook/project-references.html) in `tsconfig.json` files to ensure they remain accurate based on your project dependencies (`import` or `require` statements). This sync is automatically done when running tasks such as `build` or `typecheck`, which require updated references to function correctly.
-
-To manually trigger the process to sync the project graph dependencies information to the TypeScript project references, run the following command:
-
-```sh
-npx nx sync
+Build the portfolio for production:
+```bash
+npx nx build portfolio-portal
 ```
 
-You can enforce that the TypeScript project references are always in the correct state when running in CI by adding a step to your CI job configuration that runs the following command:
-
-```sh
-npx nx sync:check
+Build the Sanity studio:
+```bash
+npx nx build portfolio-portal-sanity
 ```
 
-[Learn more about nx sync](https://nx.dev/reference/nx-commands#sync)
+## Project Structure
 
+```
+apps/
+├── portfolio-portal/          # Next.js frontend application
+│   ├── app/                  # App Router pages and components
+│   ├── public/               # Static assets
+│   └── project.json          # Nx project configuration
+├── portfolio-portal-sanity/   # Sanity CMS studio
+│   ├── schemaTypes/          # Content schemas
+│   └── sanity.config.ts      # Sanity configuration
+```
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## Deployment
 
-## Install Nx Console
+The applications are configured for deployment on Vercel with automatic builds from the repository.
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+## Commands
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-# portfolio-portal-nx
-# portfolio-portal-nx
+- `npx nx serve <project>` - Start development server
+- `npx nx build <project>` - Build for production
+- `npx nx graph` - View project dependency graph
+- `npx nx reset` - Clear Nx cache
