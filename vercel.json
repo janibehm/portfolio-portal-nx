@@ -1,6 +1,0 @@
-{
-  "buildCommand": "npx nx build portfolio-portal",
-  "outputDirectory": "dist/apps/portfolio-portal/.next",
-  "installCommand": "npm install",
-  "framework": "nextjs"
-}
