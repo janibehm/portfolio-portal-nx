@@ -18,7 +18,18 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      "public/sw.js",
+      "public/workbox-*.js",
+      "public/fallback-*.js",
     ],
+  },
+  {
+    rules: {
+      // Allow console.log in PWA installer for debugging
+      "no-console": "off",
+      // Allow empty dependency arrays in useEffect when appropriate
+      "react-hooks/exhaustive-deps": "warn",
+    },
   },
 ];
 

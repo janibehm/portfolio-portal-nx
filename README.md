@@ -72,5 +72,16 @@ The applications are configured for deployment on Vercel with automatic builds f
 
 - `npx nx serve <project>` - Start development server
 - `npx nx build <project>` - Build for production
+- `npx nx start <project>` - Start production server (port 3000)
 - `npx nx graph` - View project dependency graph
 - `npx nx reset` - Clear Nx cache
+
+## PWA Features
+
+The portfolio is configured as a Progressive Web App (PWA) with:
+- Offline functionality
+- Install prompt on mobile/desktop
+- Service worker caching
+- App-like experience
+
+Test PWA features at http://localhost:3000 after running the production build command above.
