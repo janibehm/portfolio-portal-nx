@@ -101,12 +101,13 @@ const withPWAConfig = withPWA({
     },
     {
       urlPattern: /^https:\/\/cdn\.sanity\.io\/.*/i,
-      handler: "StaleWhileRevalidate",
+      handler: "NetworkFirst",
       options: {
         cacheName: "sanity-cache",
+        networkTimeoutSeconds: 5,
         expiration: {
           maxEntries: 50,
-          maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
+          maxAgeSeconds: 60 * 60, // 1 hour
         },
       },
     },
