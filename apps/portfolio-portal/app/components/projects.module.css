@@ -64,7 +64,7 @@
 }
 
 .primaryLink {
-  background: var(--background);
+  background: transparent;
   color: var(--text-white);
   border: 1px solid var(--text-white);
 }
