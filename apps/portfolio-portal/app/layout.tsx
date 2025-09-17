@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "Portfolio Portal",
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/icon-192x192.png",
+  },
 };
 
 export const viewport: Viewport = {
@@ -35,25 +39,16 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/icon-192x192.png" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <BackgroundImage />
         <Clouds />
         <PWAInstaller />
         {children}
-                {/* Matomo Tag Manager */}
         <Script id="matomo-analytics" strategy="beforeInteractive">
           {`
             var _mtm = window._mtm = window._mtm || [];
