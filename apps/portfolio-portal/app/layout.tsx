@@ -20,6 +20,14 @@ export const metadata: Metadata = {
   title: "Portfolio Portal",
   description: "Modern portfolio website showcasing projects and skills",
   manifest: "/manifest.json",
+  robots: {
+    index: true,      
+    follow: true,      
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -28,6 +36,16 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     apple: "/icon-192x192.png",
+  },
+  openGraph: {
+    title: "Portfolio Portal",
+    description: "Modern portfolio website showcasing projects and skills",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio Portal",
+    description: "Modern portfolio website showcasing projects and skills",
   },
 };
 
