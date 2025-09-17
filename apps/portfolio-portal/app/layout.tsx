@@ -5,6 +5,7 @@ import BackgroundImage from "./components/BackgroundImage";
 import Clouds from "./components/Clouds";
 import PWAInstaller from "./components/PWAInstaller";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -67,6 +68,7 @@ export default function RootLayout({
         <Clouds />
         <PWAInstaller />
         {children}
+        <SpeedInsights />
         <Script id="matomo-analytics" strategy="beforeInteractive">
           {`
             var _mtm = window._mtm = window._mtm || [];
