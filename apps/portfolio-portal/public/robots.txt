@@ -1,0 +1,18 @@
+# Allow all web crawlers to access the site
+User-agent: *
+Allow: /
+
+# Sitemap location (update with actual domain)
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Optional: Crawl delay (in seconds)
+# Crawl-delay: 1
+
+# Block access to admin/private areas (if any)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Allow specific files that might be blocked by default
+Allow: /favicon.ico
+Allow: /*.css
+Allow: /*.js
